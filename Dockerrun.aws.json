@@ -1,47 +1,16 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "volumes": [
-    {
-      "name": "logstash-config",
-      "host": {
-        "sourcePath": "/var/app/current/config"
-      }
-    },
-    {
-      "name": "logstash-data",
-      "host": {
-        "sourcePath": "/opt/logstash/data"
-      }
-    }  
-  ],
   "containerDefinitions": [
     {
-      "name": "logstash",
-      "image": "pblittle/docker-logstash",
+      "name": "logs",
+      "image": "zazo/logs",
       "essential": true,
       "memory": 400,
       "portMappings": [
         {
-          "hostPort": 80,
-          "containerPort": 9292
-        },
-        {
-          "hostPort": 9200,
-          "containerPort": 9200
-        },
-        {
-          "hostPort": 9998,
-          "containerPort": 9998
-        }
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "logstash-config",
-          "containerPath": "/opt/logstash/conf.d"
-        },
-        {
-          "sourceVolume": "logstash-data",
-          "containerPath": "/opt/logstash/data"
+          "hostPort": 9900,
+          "containerPort": 9900,
+          "protocol": "udp"
         }
       ]
     }
