@@ -1,6 +1,7 @@
-.logstash
+# IDE files
+.idea
 
-# Elastic Beanstalk Files
+# ElasticBeanstalk files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
