@@ -7,4 +7,4 @@ docker run -d \
   -e SECRET_KEY="<AWS_SECRET_KEY>" \
   -e ENVIRONMENT="development"
   -p 9900:9900/udp \
-  zazo-logs
+  zazo/logs

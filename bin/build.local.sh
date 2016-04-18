@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t zazo-logs .
+docker build -t zazo/logs .
