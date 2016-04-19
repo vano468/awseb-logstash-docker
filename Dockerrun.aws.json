@@ -11,6 +11,9 @@
           "hostPort": 9900,
           "containerPort": 9900,
           "protocol": "udp"
+        }, {
+          "hostPort": 80,
+          "containerPort": 80
         }
       ]
     }
