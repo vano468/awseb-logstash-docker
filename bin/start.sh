@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-envsubst < /config/logstash.tpl.conf > /config/logstash.conf
+envsubst < /opt/logstash/logstash.tpl.conf > /opt/logstash/logstash.conf
 
-exec logstash -f /config/logstash.conf
+service nginx start
+
+exec logstash -f /opt/logstash/logstash.conf
