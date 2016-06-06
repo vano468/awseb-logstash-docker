@@ -12,7 +12,10 @@ run:
 	-e ENVIRONMENT="development" \
 	-e HTTP_BASIC_NAME="admin" \
 	-e HTTP_BASIC_PASSWORD="password" \
+	-e HTTP_INPUT_NAME="admin" \
+	-e HTTP_INPUT_PASSWORD="password" \
 	-p 80:80 \
+	-p 9901:9901 \
 	-p 9900:9900/udp \
 	$(NAME)
 
