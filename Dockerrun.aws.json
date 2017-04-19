@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "logs",
-      "image": "zazo/logs",
+      "image": "<replace-with-container-name>",
       "essential": true,
       "memory": 400,
       "portMappings": [
